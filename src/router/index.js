@@ -1,4 +1,5 @@
 import { route } from 'quasar/wrappers';
+import { LoadingBar } from 'quasar';
 import {
   createRouter,
   createMemoryHistory,
@@ -33,5 +34,11 @@ export default route(function (/* { store, ssrContext } */) {
     history: createHistory(process.env.VUE_ROUTER_BASE),
   });
 
+  Router.beforeEach(() => {
+    LoadingBar.start();
+  });
+  Router.afterEach(() => {
+    LoadingBar.stop();
+  });
   return Router;
 });
