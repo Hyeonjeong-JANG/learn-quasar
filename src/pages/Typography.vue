@@ -61,11 +61,25 @@
   </q-page>
   <div>Typography</div>
 </template>
-<!-- <script>
-export default {
-  name: 'TypographyComp',
+<script>
+import { useMeta } from 'quasar';
+const metaData = {
+  title: 'Typography',
+  meta: {
+    description: {
+      name: 'description',
+      content: '하나코딩 Quasar 강의의 Typography에 대한 코드입니다.',
+    },
+    keywords: {
+      name: 'keywords',
+      content: '하나코딩, Quasar, 강의, Typography',
+    },
+  },
 };
-</script> -->
-<script setup></script>
+</script>
+
+<script setup>
+useMeta(metaData);
+</script>
 
 <style lang="scss" scoped></style>
